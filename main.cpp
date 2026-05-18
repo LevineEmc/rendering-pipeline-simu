@@ -154,15 +154,18 @@ int main()
             std::max(0.0f,
             n2.dot(lightDir));
 
-        // rasterize
-
-
+        // rasterize 三角形填充
         fb.drawTriangle(
             x0, y0, p0.z,
             x1, y1, p1.z,
             x2, y2, p2.z,
             i0, i1, i2
         );
+
+        //线框
+        // fb.drawLine(x0, y0, x1, y1, {255, 255, 255});
+        // fb.drawLine(x1, y1, x2, y2, {255, 255, 255});
+        // fb.drawLine(x2, y2, x0, y0, {255, 255, 255});
     }
 
     // save
