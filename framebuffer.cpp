@@ -128,7 +128,7 @@ void FrameBuffer::setPixelDepth(int x,int y,float depth,Color color)
     }
 
     int index = y * width + x;
-
+    //z-buffer depth test
     if (depth < depthBuffer[index])
     {
         depthBuffer[index] = depth;

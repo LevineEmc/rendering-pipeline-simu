@@ -157,6 +157,34 @@ struct Mat4
 
         return rz * ry * rx;
     }
+
+    static Mat4 perspective(
+    float fov,
+    float aspect,
+    float near,
+    float far)
+    {
+        Mat4 r = {};
+
+        float tanHalfFov =
+            tan(fov / 2.0f);
+
+        r.m[0][0] =
+            1.0f / (aspect * tanHalfFov);
+
+        r.m[1][1] =
+            1.0f / tanHalfFov;
+
+        r.m[2][2] =
+            -(far + near) / (far - near);
+
+        r.m[2][3] =
+            -(2.0f * far * near) / (far - near);
+
+        r.m[3][2] = -1.0f;
+
+        return r;
+    }
 };
 
 #endif
