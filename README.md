@@ -4,8 +4,9 @@
 
 线框图
 
-![](.\cmake-build-debug\output_wireframe.png)
+![](https://github.com/LevineEmc/rendering-pipeline-simu/blob/main/cmake-build-debug/output_wireframe.png)
 
 整体效果 
 
-![](.\cmake-build-debug\output.png)
+![](https://github.com/LevineEmc/rendering-pipeline-simu/blob/main/cmake-build-debug/output.png)
+
